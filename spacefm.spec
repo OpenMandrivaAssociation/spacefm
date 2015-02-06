@@ -1,7 +1,7 @@
 Summary:	A multi-panel tabbed file manager
 Name:		spacefm
 Version:	0.8.7
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		File tools
 Url:		http://ignorantguru.github.com/spacefm/
