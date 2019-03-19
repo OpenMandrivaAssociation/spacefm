@@ -21,6 +21,7 @@ Requires:	lsof
 Requires:	udisks2
 # For plugin download
 Requires:	wget
+Requires: libffmpegthumbnailer4
 
 %description
 SpaceFM is a multi-panel tabbed file manager with built-in VFS, udev-based
