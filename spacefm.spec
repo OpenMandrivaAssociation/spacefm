@@ -24,6 +24,8 @@ Requires:	udisks2
 # For plugin download
 Requires:	wget
 
+%define Werror_cflags %nil
+
 %description
 SpaceFM is a multi-panel tabbed file manager with built-in VFS, udev-based
 device manager, customizable menu system, and bash integration.
