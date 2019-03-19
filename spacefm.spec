@@ -6,6 +6,7 @@ License:	GPLv3+
 Group:		File tools
 Url:		http://ignorantguru.github.com/spacefm/
 Source0:	http://download.sourceforge.net/spacefm/%{name}-%{version}.tar.gz
+Patch0:   spacefm-sysmacros.patch
 BuildRequires:	intltool
 # It's possible to build with GTK3 as well
 BuildRequires:	pkgconfig(gtk+-2.0)
@@ -30,13 +31,14 @@ device manager, customizable menu system, and bash integration.
 
 %prep
 %setup -q
+%autopatch -p0
 
 %build
 %configure2_5x
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # for configs
 mkdir -p %{buildroot}%{_sysconfdir}/%{name}/
