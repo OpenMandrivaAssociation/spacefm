@@ -34,6 +34,7 @@ device manager, customizable menu system, and bash integration.
 %autopatch -p0
 
 %build
+autoreconf -vfi
 %configure2_5x --with-gtk3
 %make_build
 
