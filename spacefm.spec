@@ -12,7 +12,7 @@ BuildRequires:	intltool
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libstartup-notification-1.0)
 BuildRequires:	pkgconfig(libudev)
-BuildRequires:  libffmpegthumbnailer-devel
+BuildRequires:  pkgconfig(libffmpegthumbnailer)
 
 # To perform 'run as root' functions
 Requires:	gksu
