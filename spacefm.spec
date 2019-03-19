@@ -11,8 +11,7 @@ BuildRequires:	intltool
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libstartup-notification-1.0)
 BuildRequires:	pkgconfig(libudev)
-BuildRequires:  libffmpegthumbnailer4
-BuildRequires:  ffmpegthumbnailer
+BuildRequires:  libffmpegthumbnailer-dev
 # To perform 'run as root' functions
 Requires:	gksu
 # Eject media
