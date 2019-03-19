@@ -24,8 +24,6 @@ Requires:	udisks2
 # For plugin download
 Requires:	wget
 
-%define Werror_cflags %nil
-
 %description
 SpaceFM is a multi-panel tabbed file manager with built-in VFS, udev-based
 device manager, customizable menu system, and bash integration.
@@ -57,4 +55,3 @@ rm -rf %{buildroot}%{_defaultdocdir}
 %{_datadir}/mime/packages/spacefm-mime.xml
 %{_iconsdir}/hicolor/*/apps/%{name}*.png
 %{_iconsdir}/Faenza/apps/*/spacefm*.png
-
