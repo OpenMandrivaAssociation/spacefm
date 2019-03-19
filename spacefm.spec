@@ -6,12 +6,13 @@ License:	GPLv3+
 Group:		File tools
 Url:		http://ignorantguru.github.com/spacefm/
 Source0:	http://download.sourceforge.net/spacefm/%{name}-%{version}.tar.gz
+Patch0:   spacefm-sysmacros.patch
 BuildRequires:	intltool
-# It's possible to build with GTK3 as well
-BuildRequires:	pkgconfig(gtk+-2.0)
+# It's possible to build with GTK2 as well
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libstartup-notification-1.0)
 BuildRequires:	pkgconfig(libudev)
-BuildRequires:  libffmpegthumbnailer-devel
+BuildRequires:  pkgconfig(libffmpegthumbnailer)
 
 # To perform 'run as root' functions
 Requires:	gksu
@@ -30,13 +31,15 @@ device manager, customizable menu system, and bash integration.
 
 %prep
 %setup -q
+%autopatch -p0
 
 %build
-%configure2_5x
-%make
+autoreconf -vfi
+%configure2_5x --with-gtk3
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # for configs
 mkdir -p %{buildroot}%{_sysconfdir}/%{name}/
@@ -50,6 +53,7 @@ rm -rf %{buildroot}%{_defaultdocdir}
 %doc data/spacefm-manual-en.html
 %{_bindir}/%{name}*
 %dir %{_sysconfdir}/%{name}/
+%{_sysconfdir}/spacefm/spacefm.conf
 %{_datadir}/%{name}/
 %{_datadir}/applications/*.desktop
 %{_datadir}/mime/packages/spacefm-mime.xml
