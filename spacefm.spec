@@ -11,6 +11,8 @@ BuildRequires:	intltool
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libstartup-notification-1.0)
 BuildRequires:	pkgconfig(libudev)
+BuildRequires:  libffmpegthumbnailer4
+BuildRequires:  ffmpegthumbnailer
 # To perform 'run as root' functions
 Requires:	gksu
 # Eject media
@@ -21,7 +23,6 @@ Requires:	lsof
 Requires:	udisks2
 # For plugin download
 Requires:	wget
-Requires: libffmpegthumbnailer4
 
 %description
 SpaceFM is a multi-panel tabbed file manager with built-in VFS, udev-based
