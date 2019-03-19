@@ -52,6 +52,7 @@ rm -rf %{buildroot}%{_defaultdocdir}
 %doc data/spacefm-manual-en.html
 %{_bindir}/%{name}*
 %dir %{_sysconfdir}/%{name}/
+%{_sysconfdir}/spacefm/spacefm.conf
 %{_datadir}/%{name}/
 %{_datadir}/applications/*.desktop
 %{_datadir}/mime/packages/spacefm-mime.xml
