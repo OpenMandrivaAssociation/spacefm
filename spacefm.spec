@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv3+
 Group:		File tools
 Url:		http://ignorantguru.github.com/spacefm/
-Source0:	http://download.sourceforge.net/spacefm/%{name}-%{version}.tar.xz
+Source0:	http://download.sourceforge.net/spacefm/%{name}-%{version}.tar.gz
 BuildRequires:	intltool
 # It's possible to build with GTK3 as well
 BuildRequires:	pkgconfig(gtk+-2.0)
