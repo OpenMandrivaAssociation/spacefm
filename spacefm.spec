@@ -8,8 +8,8 @@ Url:		http://ignorantguru.github.com/spacefm/
 Source0:	http://download.sourceforge.net/spacefm/%{name}-%{version}.tar.gz
 Patch0:   spacefm-sysmacros.patch
 BuildRequires:	intltool
-# It's possible to build with GTK3 as well
-BuildRequires:	pkgconfig(gtk+-2.0)
+# It's possible to build with GTK2 as well
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libstartup-notification-1.0)
 BuildRequires:	pkgconfig(libudev)
 BuildRequires:  pkgconfig(libffmpegthumbnailer)
@@ -34,7 +34,7 @@ device manager, customizable menu system, and bash integration.
 %autopatch -p0
 
 %build
-%configure2_5x
+%configure2_5x --with-gtk3
 %make_build
 
 %install
