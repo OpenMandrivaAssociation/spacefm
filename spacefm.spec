@@ -32,8 +32,8 @@ device manager, customizable menu system, and bash integration.
 %setup -q
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 %install
 %makeinstall_std
