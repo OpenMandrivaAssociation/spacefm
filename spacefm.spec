@@ -14,6 +14,11 @@ Patch1:		spacefm-1.0.6-fix_link.patch
 # (fedora)
 Patch4:		spacefm-1.0.5-force-x11-backend.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libstartup-notification-1.0)
